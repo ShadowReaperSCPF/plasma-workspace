@@ -159,14 +159,13 @@ QJSValue Widget::geometry() const
 */
     QQuickItem *appletItem = d->applet.data()->property("_plasma_graphicObject").value<QQuickItem *>();
 
-    if (appletItem) {qWarning()<<"AAAAAAAAA"<<engine();
+    if (appletItem) {
         QJSValue rect = engine()->newObject();
         const QPointF pos = appletItem->mapToScene(QPointF(0,0));
         rect.setProperty(QStringLiteral("x"), pos.x());
         rect.setProperty(QStringLiteral("y"), pos.y());
         rect.setProperty(QStringLiteral("width"), appletItem->width());
         rect.setProperty(QStringLiteral("height"), appletItem->height());
-        qWarning() << "AAAA"<< appletItem;
         return rect;
     }
 
