@@ -153,10 +153,6 @@ void Widget::setIndex(int index)
 
 QJSValue Widget::geometry() const
 {
-    /*if (d->applet) {
-        return d->applet.data()->geometry();
-    }
-*/
     QQuickItem *appletItem = d->applet.data()->property("_plasma_graphicObject").value<QQuickItem *>();
 
     if (appletItem) {
