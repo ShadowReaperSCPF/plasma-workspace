@@ -38,7 +38,7 @@
 
 static const QString s_copyToClipboardId = QStringLiteral("copyToClipboard");
 
-K_EXPORT_PLASMA_RUNNER(calculatorrunner, CalculatorRunner)
+K_EXPORT_PLASMA_RUNNER_WITH_JSON(CalculatorRunner, "plasma-runner-calculator.json")
 
 CalculatorRunner::CalculatorRunner( QObject* parent, const QVariantList &args )
     : Plasma::AbstractRunner(parent, args)

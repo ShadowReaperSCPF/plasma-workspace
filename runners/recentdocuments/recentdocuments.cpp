@@ -36,7 +36,7 @@
 using namespace KActivities::Stats;
 using namespace KActivities::Stats::Terms;
 
-K_EXPORT_PLASMA_RUNNER(recentdocuments, RecentDocuments)
+K_EXPORT_PLASMA_RUNNER_WITH_JSON(RecentDocuments, "plasma-runner-recentdocuments.json")
 
 static const QString s_openParentDirId = QStringLiteral("openParentDir");
 
